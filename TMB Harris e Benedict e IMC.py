@@ -11,9 +11,9 @@ class paciente (object):
         
     def hb (self):
         if sexo == 'm':
-            hb =(10*self.peso)+(6.25*(self.estatura*100))-(5*self.idade)+5
+            hb =(((((10*self.peso)+(6.25*(self.estatura*100))-(5*self.idade)+5)*fa)*fi)*ft)
         else:
-            hb =(10*self.peso)+(6.25*(seld.estatura*100))-(5*self.idade)-161
+            hb =(((((10*self.peso)+(6.25*(seld.estatura*100))-(5*self.idade)-161)*fa)*fi)*ft)
         return hb
 
     
@@ -101,9 +101,49 @@ while valid_idade == False:
     except:
         print('Use apenas numeros')
 
+
+valid_fa = False
+while valid_fa == False:
+    fa = input('Digite o fator atividade: ')
+    try:
+        fa = float (fa)
+        if fa < 0:
+            print('O fator atividade não pode ser negativo')
+        else:
+            valid_fa = True
+    except:
+        print('Use apenas numeros e separe decimais com ponto')
+
+    
+valid_fi = False
+while valid_fi == False:
+    fi = input('Digite o fator injuria: ')
+    try:
+        fi = float (fi)
+        if fa < 0:
+            print('O fator injuria não pode ser negativo')
+        else:
+            valid_fi = True
+    except:
+        print('Use apenas numeros e separe decimais com ponto')
+
+
+valid_ft = False
+while valid_ft == False:
+    ft = input('Digite o fator termico: ')
+    try:
+        ft = float (ft)
+        if ft < 0:
+            print('O fator termico não pode ser negativo')
+        else:
+            valid_ft = True
+    except:
+        print('Use apenas numeros e separe decimais com ponto')
+
 a = paciente(nome, sexo, peso, estatura, idade)
 
 
 print (a.hb())
 print(a.imc())
 print(a.class_imc())
+
