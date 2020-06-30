@@ -1,6 +1,6 @@
 print ('calculadora de gasto energético basal em programação orientada por objeto')
 
-
+##Creation of the patient
 class paciente (object):
     def __init__(self, nome, sexo, peso, estatura, idade):
         self.sexo = sexo.lower()
@@ -8,7 +8,7 @@ class paciente (object):
         self.estatura = estatura
         self.idade = idade
 
-        
+    ##Function to calculate de Harris and Benedict formula for the patient
     def hb (self):
         if sexo == 'm':
             hb =(((((10*self.peso)+(6.25*(self.estatura*100))-(5*self.idade)+5)*fa)*fi)*ft)
@@ -16,12 +16,12 @@ class paciente (object):
             hb =(((((10*self.peso)+(6.25*(seld.estatura*100))-(5*self.idade)-161)*fa)*fi)*ft)
         return hb
 
-    
+    ##BMI calculation
     def imc (self):
         imc = self.peso/(self.estatura*self.estatura)
         return imc
 
-
+    ##BMI classification
     def class_imc (self):
         valor_imc = self.peso/(self.estatura*self.estatura)
         if self.sexo=='m':
@@ -55,8 +55,8 @@ class paciente (object):
 
 
 
-nome = input('Digite o nome: ')
 
+##Entering and validation of the variables
 valid_sexo = False
 while valid_sexo == False:
     sexo = str(input('Digite o sexo: ').lower())
@@ -140,10 +140,16 @@ while valid_ft == False:
     except:
         print('Use apenas numeros e separe decimais com ponto')
 
+
+##Creating the patient
 a = paciente(nome, sexo, peso, estatura, idade)
 
+##Creating variables with the functions values
+get = round(a.hb(),2)
+imc = round(a.imc(),2)
+class_imc = a.class_imc()
 
-print (a.hb())
-print(a.imc())
-print(a.class_imc())
-
+##Final print
+print (str(get)+' kcal/dia')
+print (str(imc)+ ' kg/m²')
+print ('Classificação do IMC: '+ str(class_imc))
