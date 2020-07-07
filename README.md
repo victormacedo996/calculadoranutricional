@@ -2,21 +2,21 @@
 
 1 - Introduction
 
-This script calculate total energy expendure for hospitalized patients, body mass index and classificate the BMI by gender and age. The metabolic rate is calculate using Harris and Benedict equation. 
+This script calculates the total energy expendure for hospitalized patients, body mass index and classify the BMI by gender and age. The metabolic rate is calculated using Harris and Benedict equation.
 
 2 - Techinical talking points
 
-This script may be useful to assess the patient quickly, specially on low budget and crowded hospitals.
+This script may be useful to assess the patient quickly, specially in crowded hospitals with low budget.
 
 3 - Technologies and languages
 
-The repository only uses Python 3.8 and nothing else.
+The repository only uses Python 3.8.
 
 4 - Setup and use
 
 The only thing you'll need is to download the source code and run it on your favorite Python IDE.
 
-Once the sript is runing, it'll ask you for a few inputs:
+Once the script is runing, it'll ask you for a few inputs:
 
     • Gender - Just enter type the gender of the patient. Use M to MALE or F to FEMALE
 
@@ -33,7 +33,7 @@ Once the sript is runing, it'll ask you for a few inputs:
     • Thermal factor - Type the thermal factor according to the condition of the patient
 
 
-If you'll use injury factor, except in heart failure, use active factor as 1. And, if the patient doesn't have any complications, use injury factor as 1.
+If you use injury factor, except in heart failure, use active factor as 1. And, if the patient doesn't have any complications, use injury factor as 1.
 
 5 - Contributions, issues and forking
 
@@ -49,7 +49,6 @@ I don't have in mind to be the best programmer in the world, but I'm here to lea
 
 
 9 - Useful links and tools
-
 Factors
 
 • Active factor
