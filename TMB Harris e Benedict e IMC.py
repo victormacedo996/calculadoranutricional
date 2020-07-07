@@ -1,155 +1,153 @@
-print ('calculadora de gasto energético basal em programação orientada por objeto')
+## Creation of the patient
+class patient (object):
+    def __init__ (self, sex, weight, height, age):
+        self.sex = sex.lower ()
+        self.weight = weight
+        self.height = height
+        self.age = age
 
-##Creation of the patient
-class paciente (object):
-    def __init__(self, nome, sexo, peso, estatura, idade):
-        self.sexo = sexo.lower()
-        self.peso = peso
-        self.estatura = estatura
-        self.idade = idade
-
-    ##Function to calculate de Harris and Benedict formula for the patient
+    ## Function to calculate by Harris and Benedict formula for the patient
     def hb (self):
-        if sexo == 'm':
-            hb =(((((10*self.peso)+(6.25*(self.estatura*100))-(5*self.idade)+5)*fa)*fi)*ft)
+        if sex == 'm':
+            hb = (((((10*self.weight)+(6.25*(self.height*100))-(5*self.age)+5)*af)*fi)*tf)
         else:
-            hb =(((((10*self.peso)+(6.25*(seld.estatura*100))-(5*self.idade)-161)*fa)*fi)*ft)
+            hb = (((((10*self.weight)+ (6.25*(self.height*100))-(5*self.age)-161)*fa)*fi)*ft)
         return hb
 
-    ##BMI calculation
-    def imc (self):
-        imc = self.peso/(self.estatura*self.estatura)
-        return imc
+    ## BMI calculation
+    def bmi (self):
+        bmi = self.weight / (self.height * self.height)
+        return bmi
 
-    ##BMI classification
-    def class_imc (self):
-        valor_imc = self.peso/(self.estatura*self.estatura)
-        if self.sexo=='m':
-            if valor_imc < 20.7:
-                return "Abaixo do peso"
-            elif valor_imc >= 20.7 and valor_imc < 26.4:
-                return "Peso normal"
-            elif valor_imc >= 26.4 and valor_imc < 27.8:
-                return "Marginalmente acima do peso"
-            elif valor_imc >= 27.8 and valor_imc < 31.1:
-                return "Acima do peso ideal"
-            elif valor_imc >= 31.1:
-                return "Obesidade"
+    ## BMI classification
+    def class_bmi (self):
+        bmi_value = self.weight / (self.height * self.height)
+        if self.sex == 'm':
+            if bmi_value <20.7:
+                return "Underweight"
+            elif bmi_value>= 20.7 and bmi_value <26.4:
+                return "Normal weight"
+            elif bmi_value>= 26.4 and bmi_value <27.8:
+                return "Marginally overweight"
+            elif bmi_value>= 27.8 and bmi_value <31.1:
+                return "Above ideal weight"
+            elif bmi_value>= 31.1:
+                return "Obesity"
             else:
-                return 'erro'
+                return 'error'
 
             
-        if self.sexo=='f':
-            if valor_imc < 19.1:
-                return "Abaixo do peso"
-            elif valor_imc >= 19.1 and valor_imc < 25.8:
-                return "Peso normal"
-            elif valor_imc >= 25.8 and valor_imc < 27.3:
-                return "Marginalmente acima do peso"
-            elif valor_imc >= 27.3 and valor_imc < 32.3:
-                return "Acima do peso ideal"
-            elif valor_imc >= 32.3:
-                return "Obesidade"
+        if self.sex == 'f':
+            if imc_value <19.1:
+                return "Underweight"
+            elif bmi_value >= 19.1 and bmi_value <25.8:
+                return "Normal weight"
+            elif bmi_value >= 25.8 and bmi_value <27.3:
+                return "Marginally overweight"
+            elif bmi_value >= 27.3 and bmi_value <32.3:
+                return "Above ideal weight"
+            elif bmi_value >= 32.3:
+                return "Obesity"
             else:
-                return 'erro'
+                return 'error'
 
 
 
 
-##Entering and validation of the variables
-valid_sexo = False
-while valid_sexo == False:
-    sexo = str(input('Digite o sexo: ').lower())
-    if sexo != 'm' and sexo != 'f':
-        print ('Use M para masculino e F para feminino')
+## Entering and validation of the variables
+valid_sex = False
+while valid_sex == False:
+    sex = str (input ('Enter gender:') .lower ())
+    if sex != 'm' and sex != 'f':
+        print ('Use M for male and F for female')
     else:
-        valid_sexo = True
+        valid_sex = True
 
-valid_peso = False
-while valid_peso == False:
-    peso = input('Digite o peso: ')
+valid_weight = False
+while valid_weight == False:
+    weight = input ('Enter weight:')
     try:
-        peso = float (peso)
-        if peso < 0:
-            print('O peso não pode ser negativo')
+        weight = float (weight)
+        if weight <0:
+            print ('Weight cannot be negative')
         else:
-            valid_peso = True
+            valid_weight = True
     except:
-        print('Use apenas numeros e separe decimais com ponto')
+        print ('Use only numbers and separate decimals with a period')
 
-valid_estatura = False
-while valid_estatura == False:
-    estatura = input('Digite a estatura: ')
+valid_height = False
+while valid_height == False:
+    height = input ('Enter stature:')
     try:
-       estatura = float(estatura)
-       if estatura < 0:
-           print('A estatura não pode ser negativa')
+       height = float (height)
+       if height <0:
+           print ('Stature cannot be negative')
        else:
-            valid_estatura = True
+            valid_height= True
     except:
-        print('Use apenas numeros e separe decimais com ponto')
+        print ('Use only numbers and separate decimals with a period')
 
-valid_idade = False
-while valid_idade == False:
-    idade = input('Digite a idade: ')
+validity = False
+while validity == False:
+    age = input ('Enter age:')
     try:
-        idade = int(idade)
-        if idade < 0:
-            print('A idade não pode ser negativa')
+        age = int (age)
+        if age <0:
+            print ('Age cannot be negative')
         else:
-            valid_idade = True
+            validity = True
     except:
-        print('Use apenas numeros')
+        print ('Use only numbers')
 
 
-valid_fa = False
-while valid_fa == False:
-    fa = input('Digite o fator atividade: ')
+valid_af = False
+while valid_af == False:
+    af = input ('Enter the activity factor:')
     try:
-        fa = float (fa)
-        if fa < 0:
-            print('O fator atividade não pode ser negativo')
+        af = float (af)
+        if af <0:
+            print ('Activity factor cannot be negative')
         else:
-            valid_fa = True
+            valid_af = True
     except:
-        print('Use apenas numeros e separe decimais com ponto')
+        print ('Use only numbers and separate decimals with a period')
 
     
 valid_fi = False
 while valid_fi == False:
-    fi = input('Digite o fator injuria: ')
+    fi = input ('Enter the injury factor:')
     try:
         fi = float (fi)
-        if fa < 0:
-            print('O fator injuria não pode ser negativo')
+        if fi <0:
+            print ('The injury factor cannot be negative')
         else:
             valid_fi = True
     except:
-        print('Use apenas numeros e separe decimais com ponto')
+        print ('Use only numbers and separate decimals with a period')
 
 
-valid_ft = False
-while valid_ft == False:
-    ft = input('Digite o fator termico: ')
+valid_tf = False
+while valid_tf == False:
+    tf = input ('Enter the thermal factor:')
     try:
-        ft = float (ft)
-        if ft < 0:
-            print('O fator termico não pode ser negativo')
+        tf = float (tf)
+        if tf <0:
+            print ('The thermal factor cannot be negative')
         else:
-            valid_ft = True
+            valid_tf = True
     except:
-        print('Use apenas numeros e separe decimais com ponto')
+        print ('Use only numbers and separate decimals with a period')
 
 
-##Creating the patient
-a = paciente(nome, sexo, peso, estatura, idade)
+## Creating the patient
+patient = patient (sex, weight, height, age)
 
-##Creating variables with the functions values
-get = round(a.hb(),2)
-imc = round(a.imc(),2)
-class_imc = a.class_imc()
+## Creating variables with the functions values
+tee = round (patient.hb (), 2)
+bmi = round (patient.bmi (), 2)
+class_bmi = patient.class_bmi ()
 
-##Final print
-print (str(get)+' kcal/dia')
-print (str(imc)+ ' kg/m²')
-print ('Classificação do IMC: '+ str(class_imc))
+## Final print
+print (str (tee) + ' kcal/day')
+print (str (bmi) + ' kg/m²')
+print ('BMI classification: ' + str (class_bmi))
