@@ -1,18 +1,18 @@
-# calculadoranutricional
+# Nutricional calculator
 
-1 - Introduction
+# 1 - Introduction
 
 This script calculates the total energy expendure for hospitalized patients, body mass index and classify the BMI by gender and age. The metabolic rate is calculated using Harris and Benedict equation.
 
-2 - Techinical talking points
+# 2 - Techinical talking points
 
 This script may be useful to assess the patient quickly, specially in crowded hospitals with low budget.
 
-3 - Technologies and languages
+# 3 - Technologies and languages
 
 The repository only uses Python 3.8.
 
-4 - Setup and use
+# 4 - Setup and use
 
 The only thing you'll need is to download the source code and run it on your favorite Python IDE.
 
@@ -35,20 +35,20 @@ Once the script is runing, it'll ask you for a few inputs:
 
 If you use injury factor, except in heart failure, use active factor as 1. And, if the patient doesn't have any complications, use injury factor as 1.
 
-5 - Contributions, issues and forking
+# 5 - Contributions, issues and forking
 
 The objective is to create a useful tool to any hospital. Any contribuitions are welcome, fell free to leave a suggestion
 
-6 - About me
+# 6 - About me
 
 Hi there! I'm an undergraduated nutrition student who fell in love with programing in a quarentine. So I created this repository to train coding and to apply the knowledge of nutrition on a real scenario. It may not be perfect (as well as my English), but I'm trying my best to learn a new field of knowledge.
 
-8 - Show your support
+# 8 - Show your support
 
 I don't have in mind to be the best programmer in the world, but I'm here to learn from my mistakes. That said, if you may, please leave a star and point out some improvements I can make on the code. Or even send me a message with some tips to make my learning process easier, all help is welcome. Thanks
 
 
-9 - Useful links and tools
+# 9 - Useful links and tools
 Factors
 
 • Active factor
